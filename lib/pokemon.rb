@@ -1,6 +1,3 @@
-require 'pry'
-require 'sqlite3'
-
 class Pokemon
 
   attr_accessor :id ,:name, :type, :db
