@@ -11,13 +11,13 @@ class Pokemon
   end
 
   def self.save(name, type, db)
-    binding.pry
     sql = <<-SQL
       INSERT INTO pokemon (name, type)
       VALUES (?, ?)
     SQL
     DB[:conn].execute(sql, db, name, type)
     @id = DB[:conn].execute("SELECT last_insert_rowid() FROM pokemon")[0][0]
+    binding.pry
   end
 
 end
