@@ -22,7 +22,7 @@ class Pokemon
       SELECT * FROM pokemon WHERE id = ? LIMIT 1
     SQL
 
-    db.execute(sql, id).collect{|row| self.new_from_db(row)}.first
+    foound_pokemon = db.execute(sql, id).collect{|row| self.new_from_db(row)}.first
   end
 
 end
