@@ -17,12 +17,12 @@ class Pokemon
 
   end
 
-  def self.find(id)
+  def self.find(id, db)
     sql = <<-SQL
       SELECT * FROM pokemon WHERE id = ? LIMIT 1
     SQL
 
-    @db.execute(sql, id).collect{|row| Student.new_from_db(row)}.first
+    db.execute(sql, id).collect{|row| self.new_from_db(row)}.first
   end
 
 end
