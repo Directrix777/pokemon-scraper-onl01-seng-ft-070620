@@ -23,6 +23,7 @@ class Pokemon
     SQL
 
     found_pokemon = db.execute(sql, id).collect{|row| self.new_from_db(row)}.first
+    binding.pry
   end
 
 end
