@@ -1,7 +1,5 @@
 require 'pry'
 
-@db = {:conn => SQLite3::Database.new("db/pokemon.db")}
-
 class Pokemon
 
   attr_accessor :id ,:name, :type, :db
