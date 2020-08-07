@@ -17,6 +17,7 @@ class Pokemon
 
   end
 
-  def find
+  def find(id)
+  end
 
 end
