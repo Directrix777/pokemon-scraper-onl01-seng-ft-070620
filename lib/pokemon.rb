@@ -22,7 +22,7 @@ class Pokemon
       SELECT * FROM pokemon WHERE id = ? LIMIT 1
     SQL
 
-    found_pokemon = db.execute(sql, id)
+    found_pokemon = db.execute(sql, id).first
     binding.pry
   end
 
