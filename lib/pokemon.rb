@@ -1,4 +1,5 @@
 require 'pry'
+require 'sqlite3'
 
 class Pokemon
 
