@@ -6,7 +6,7 @@ class Pokemon
 
   def initialize(poke_hash)
     poke_hash.each {|key, value| self.send(("#{key}="), value)}
-    
+    binding.pry
   end
 
   def self.save(name, type, db)
@@ -16,7 +16,7 @@ class Pokemon
     SQL
     @db.execute(sql, db, name, type)
     @id = @db.execute("SELECT last_insert_rowid() FROM pokemon")[0][0]
-    binding.pry
+
   end
 
 end
